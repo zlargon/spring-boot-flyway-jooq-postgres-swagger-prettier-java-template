@@ -3,6 +3,7 @@
     "start": "mvn spring-boot:run",
     "test": "mvn test",
     "clean": "mvn clean",
+    "format": "mvn prettier:write",
     "deps": "mvn dependency:tree",
     "up": "docker compose --project-name springboot-demo up -d",
     "stop": "docker compose --project-name springboot-demo stop",
