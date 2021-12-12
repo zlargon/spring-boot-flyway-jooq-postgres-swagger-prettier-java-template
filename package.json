@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "mvn spring-boot:run",
-    "test": "mvn test",
+    "test": "scripts/test.sh",
     "clean": "mvn clean",
     "format": "mvn prettier:write",
     "deps": "mvn dependency:tree",
