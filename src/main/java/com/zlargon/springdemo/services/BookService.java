@@ -1,10 +1,8 @@
 package com.zlargon.springdemo.services;
 
-import java.util.List;
-
 import com.zlargon.springdemo.dao.BookDao;
 import com.zlargon.springdemo.models.Book;
-
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
