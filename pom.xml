@@ -275,6 +275,26 @@
           </execution>
         </executions>
       </plugin>
+
+      <!-- githook-maven-plugin -->
+      <plugin>
+        <groupId>io.github.phillipuniverse</groupId>
+        <artifactId>githook-maven-plugin</artifactId>
+        <version>1.0.5</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>install</goal>
+            </goals>
+            <configuration>
+              <hooks>
+                <pre-commit>exec mvn prettier:check</pre-commit>
+                <pre-push>exec mvn test</pre-push>
+              </hooks>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>
