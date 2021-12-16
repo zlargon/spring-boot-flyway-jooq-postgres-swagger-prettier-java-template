@@ -2,7 +2,6 @@ package com.zlargon.springdemo.dao;
 
 import com.zlargon.springdemo.jooq.Tables;
 import com.zlargon.springdemo.models.Book;
-import com.zlargon.springdemo.services.MapperService;
 import java.util.List;
 import org.jooq.DSLContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,17 +13,19 @@ public class BookDao {
   @Autowired
   DSLContext dsl;
 
-  @Autowired
-  MapperService mapper;
-
   public List<Book> getBooks() {
-    return mapper.toList(Book.class, dsl.select().from(Tables.BOOK).fetch());
+    return dsl
+      .select() //
+      .from(Tables.BOOK)
+      .fetchInto(Book.class);
   }
 
   public Book addBook(Book book) {
-    return mapper.toObject(
-      Book.class,
-      dsl.insertInto(Tables.BOOK).set(Tables.BOOK.TITLE, book.getTitle()).returning().fetchOne()
-    );
+    return dsl
+      .insertInto(Tables.BOOK) //
+      .set(Tables.BOOK.TITLE, book.getTitle())
+      .returning()
+      .fetchOne()
+      .into(Book.class);
   }
 }

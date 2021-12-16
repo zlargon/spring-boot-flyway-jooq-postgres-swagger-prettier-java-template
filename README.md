@@ -9,7 +9,7 @@ https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.6.1
 - Maven
 - Java 11
 - Docker
-- bash, curl, jq (Optional)
+- yarn, bash, curl, jq (Optional)
 
 ## Docker
 
@@ -75,8 +75,6 @@ yarn format  # format the source code
 - tools
 
   - lombok
-  - modelmapper
-  - modelmapper-jooq
   - spring-boot-devtools
   - spring-boot-starter-actuator
 
