@@ -102,26 +102,6 @@
         </configuration>
       </plugin>
 
-      <!-- yaml-properties-maven-plugin -->
-      <plugin>
-        <groupId>it.ozimov</groupId>
-        <artifactId>yaml-properties-maven-plugin</artifactId>
-        <version>1.1.3</version>
-        <executions>
-          <execution>
-            <phase>initialize</phase>
-            <goals>
-              <goal>read-project-properties</goal>
-            </goals>
-            <configuration>
-              <files>
-                <file>src/main/resources/application.properties</file>
-              </files>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
       <!-- flyway-maven-plugin -->
       <plugin>
         <groupId>org.flywaydb</groupId>
@@ -140,10 +120,9 @@
         <!-- Note that we need to prefix the db/migration path with filesystem:
           to prevent Flyway from looking for our migration scripts only on the classpath -->
         <configuration>
-          <driver>${spring.datasource.driverClassName}</driver>
-          <url>${spring.datasource.url}</url>
-          <user>${spring.datasource.username}</user>
-          <password>${spring.datasource.password}</password>
+          <url>jdbc:postgresql://${env.DB_URL}</url>
+          <user>${env.DB_USERNAME}</user>
+          <password>${env.DB_PASSWORD}</password>
           <locations>
             <location>filesystem:src/main/resources/db/migration</location>
           </locations>
@@ -165,10 +144,9 @@
             <configuration>
               <!-- jdbc config -->
               <jdbc>
-                <driver>${spring.datasource.driverClassName}</driver>
-                <url>${spring.datasource.url}</url>
-                <user>${spring.datasource.username}</user>
-                <password>${spring.datasource.password}</password>
+                <url>jdbc:postgresql://${env.DB_URL}</url>
+                <user>${env.DB_USERNAME}</user>
+                <password>${env.DB_PASSWORD}</password>
               </jdbc>
 
               <generator>

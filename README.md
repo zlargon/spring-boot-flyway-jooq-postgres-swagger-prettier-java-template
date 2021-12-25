@@ -6,10 +6,14 @@ https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.6.1
 
 ## Prerequisite
 
-- Maven
-- Java 11
-- Docker
-- yarn, bash, curl, jq (Optional)
+- Docker: https://www.docker.com/products/docker-desktop
+- bash
+- Maven: `sdk install maven 3.8.4`
+- Java 11: `sdk install java 11.0.13-zulu`
+- yarn: `brew install yarn`
+- direnv: `brew install direnv`
+- curl (Optional): `brew install curl`
+- jq (Optional): `brew install jq`
 
 ## Docker
 
@@ -38,7 +42,7 @@ yarn format  # format the source code
    yarn log  # check the logs from docker
    ```
 
-2. Run Spring boot servicer
+2. Run Spring boot service
 
    ```bash
    yarn start
@@ -81,10 +85,6 @@ yarn format  # format the source code
 ## Plugins
 
 - spring-boot-maven-plugin
-
-- yaml-properties-maven-plugin
-
-  - Read the yaml or properties file
 
 - flyway-maven-plugin
 
