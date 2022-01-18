@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### JOOQ generated code ###
+src/main/java/**/jooq

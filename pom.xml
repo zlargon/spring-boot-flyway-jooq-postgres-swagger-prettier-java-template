@@ -168,7 +168,7 @@
                 <!-- target -->
                 <target>
                   <packageName>com.zlargon.springdemo.jooq</packageName>
-                  <directory>target/generated-sources/jooq</directory>
+                  <directory>src/main/java</directory>
                 </target>
               </generator>
             </configuration>
@@ -267,6 +267,18 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+
+      <!-- maven-clean-plugin -->
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>src/main/java/com/zlargon/springdemo/jooq</directory>
+            </fileset>
+          </filesets>
+        </configuration>
       </plugin>
     </plugins>
   </build>
