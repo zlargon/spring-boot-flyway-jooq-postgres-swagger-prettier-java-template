@@ -64,6 +64,7 @@ yarn format  # format the source code
 - database
 
   - spring-boot-starter-jooq
+  - org.flywaydb:flyway-core
   - postgresql
 
 - document
@@ -75,6 +76,9 @@ yarn format  # format the source code
 
   - spring-boot-starter-test
   - junit-platform-console-standalone
+  - org.testcontainers:testcontainers-bom
+  - org.testcontainers:junit-jupiter
+  - org.testcontainers:postgresql
 
 - tools
 
