@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+# if this fails, please run mvn prettier:write to reformat
+echo '[pre-commit] Prettier check the code format "mvn prettier:check" ...'
+if ! mvn -q prettier:check; then
+  echo_r "\n[ERROR] Prettier check failed."
+  echo -e "Please run \"mvn prettier:write\" to reformat\n"
+  exit 1
+fi
+
+echo "[pre-commit] Prettier check ok"

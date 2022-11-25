@@ -89,6 +89,10 @@ yarn format  # format the source code
 
 - spring-boot-maven-plugin
 
+- exec-maven-plugin
+
+  - Install git hook
+
 - jacoco-maven-plugin
 
   - The code coverage report will be generated at `target/site/jacoco/index.html`
@@ -99,8 +103,3 @@ yarn format  # format the source code
     - printWidth: 120
     - tabWidth: 2
     - useTabs: false
-
-- githook-maven-plugin
-  - install git hooks
-    - pre-commit: `mvn prettier:check`
-    - pre-push: `mvn test`
