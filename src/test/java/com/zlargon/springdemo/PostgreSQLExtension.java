@@ -20,7 +20,7 @@ public class PostgreSQLExtension implements BeforeAllCallback, AfterAllCallback 
   public void beforeAll(ExtensionContext context) throws InterruptedException {
     // create postgres container
     container =
-      new PostgreSQLContainer<>("postgres:14")
+      new PostgreSQLContainer<>("postgres:14-alpine")
         .withUrlParam("currentSchema", DB_SCHEMA)
         .withDatabaseName(DB_DATABASE)
         .withUsername(DB_USERNAME)
