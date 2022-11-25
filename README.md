@@ -89,10 +89,6 @@ yarn format  # format the source code
 
 - spring-boot-maven-plugin
 
-- flyway-maven-plugin
-
-  - database schema migration
-
 - jacoco-maven-plugin
 
   - The code coverage report will be generated at `target/site/jacoco/index.html`

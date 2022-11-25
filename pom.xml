@@ -136,33 +136,6 @@
         </configuration>
       </plugin>
 
-      <!-- flyway-maven-plugin -->
-      <plugin>
-        <groupId>org.flywaydb</groupId>
-        <artifactId>flyway-maven-plugin</artifactId>
-
-        <!-- Note that we're executing the Flyway plugin in the "generate-sources" phase -->
-        <executions>
-          <execution>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>migrate</goal>
-            </goals>
-          </execution>
-        </executions>
-
-        <!-- Note that we need to prefix the db/migration path with filesystem:
-          to prevent Flyway from looking for our migration scripts only on the classpath -->
-        <configuration>
-          <url>jdbc:postgresql://localhost:5700/postgres?currentSchema=spring_demo</url>
-          <user>postgres</user>
-          <password>postgres</password>
-          <locations>
-            <location>filesystem:src/main/resources/db/migration</location>
-          </locations>
-        </configuration>
-      </plugin>
-
       <!-- jacoco-maven-plugin -->
       <!-- https://www.baeldung.com/jacoco -->
       <!-- https://github.com/dailycodebuffer/Spring-MVC-Tutorials/blob/master/JaCoCo-Demo/pom.xml -->
