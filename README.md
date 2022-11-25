@@ -2,12 +2,12 @@
 
 Create spring boot project from scratch:
 
-https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.6.1&packaging=jar&jvmVersion=11&groupId=com.zlargon&artifactId=springdemo&name=springdemo&description=&packageName=com.zlargon.springdemo&dependencies=lombok,devtools,jooq,postgresql,web,actuator
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.6&packaging=jar&jvmVersion=11&groupId=com.zlargon&artifactId=springdemo&name=springdemo&description=&packageName=com.zlargon.springdemo&dependencies=lombok,devtools,jooq,postgresql,web,actuator,testcontainers,flyway
 
 ## Prerequisite
 
-- Docker: https://www.docker.com/products/docker-desktop
 - bash
+- Docker Desktop: `brew install --cask docker`
 - Maven: `sdk install maven 3.8.4`
 - Java 11: `sdk install java 11.0.13-zulu`
 - yarn: `brew install yarn`
@@ -26,16 +26,18 @@ yarn log     # show logs from docker compose
 ## Commands
 
 ```bash
-yarn start     # run spring boot application
-yarn test      # run test by console launcher
-yarn coverage  # run test with code coverage
-yarn clean     # clean the project
-yarn format    # format the source code
+yarn start         # run spring boot application
+yarn test          # run test by console launcher
+yarn coverage      # run test with code coverage
+yarn clean         # clean the project
+yarn format        # format the source code
+yarn jooq:codegen  # run script to update jooq generated code
+yarn doc           # open swagger-ui for API documentation
 ```
 
 # Test
 
-1. Run postgres at port 5432 by docker
+1. Run postgres at port 5700 by docker
 
    ```bash
    yarn up
