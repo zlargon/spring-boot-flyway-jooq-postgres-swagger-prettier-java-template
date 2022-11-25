@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <!-- parent -->
@@ -7,7 +8,8 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.5.12</version>
-    <relativePath /> <!-- lookup parent from repository -->
+    <relativePath />
+    <!-- lookup parent from repository -->
   </parent>
 
   <!-- project info -->
@@ -152,9 +154,9 @@
         <!-- Note that we need to prefix the db/migration path with filesystem:
           to prevent Flyway from looking for our migration scripts only on the classpath -->
         <configuration>
-          <url>jdbc:postgresql://${env.DB_URL}</url>
-          <user>${env.DB_USERNAME}</user>
-          <password>${env.DB_PASSWORD}</password>
+          <url>jdbc:postgresql://localhost:5700/postgres?currentSchema=spring_demo</url>
+          <user>postgres</user>
+          <password>postgres</password>
           <locations>
             <location>filesystem:src/main/resources/db/migration</location>
           </locations>
@@ -176,9 +178,9 @@
             <configuration>
               <!-- jdbc config -->
               <jdbc>
-                <url>jdbc:postgresql://${env.DB_URL}</url>
-                <user>${env.DB_USERNAME}</user>
-                <password>${env.DB_PASSWORD}</password>
+                <url>jdbc:postgresql://localhost:5700/postgres?currentSchema=spring_demo</url>
+                <user>postgres</user>
+                <password>postgres</password>
               </jdbc>
 
               <generator>

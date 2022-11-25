@@ -11,7 +11,6 @@ https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.6.1
 - Maven: `sdk install maven 3.8.4`
 - Java 11: `sdk install java 11.0.13-zulu`
 - yarn: `brew install yarn`
-- direnv: `brew install direnv`
 - curl (Optional): `brew install curl`
 - jq (Optional): `brew install jq`
 
