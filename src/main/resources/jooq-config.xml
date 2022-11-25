@@ -1,0 +1,31 @@
+<configuration>
+  <!-- jdbc config -->
+  <jdbc>
+    <url>jdbc:postgresql://localhost:5700/postgres?currentSchema=spring_demo</url>
+    <user>postgres</user>
+    <password>postgres</password>
+  </jdbc>
+
+  <generator>
+    <!-- database options -->
+    <database>
+      <name>org.jooq.meta.postgres.PostgresDatabase</name>
+      <includes>.*</includes>
+      <excludes>flyway_schema_history</excludes>
+      <inputSchema>spring_demo</inputSchema>
+    </database>
+
+    <!-- generate options -->
+    <generate>
+      <deprecated>true</deprecated>
+      <instanceFields>true</instanceFields>
+      <pojos>false</pojos>
+    </generate>
+
+    <!-- target -->
+    <target>
+      <packageName>com.zlargon.springdemo.jooq</packageName>
+      <directory>src/main/java</directory>
+    </target>
+  </generator>
+</configuration>

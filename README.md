@@ -93,10 +93,6 @@ yarn format  # format the source code
 
   - database schema migration
 
-- jooq-codegen-maven
-
-  - generate the JOOQ java code by the database schema
-
 - jacoco-maven-plugin
 
   - The code coverage report will be generated at `target/site/jacoco/index.html`

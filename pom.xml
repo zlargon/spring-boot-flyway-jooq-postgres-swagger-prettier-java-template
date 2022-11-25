@@ -163,53 +163,6 @@
         </configuration>
       </plugin>
 
-      <!-- jooq-codegen-maven -->
-      <plugin>
-        <groupId>org.jooq</groupId>
-        <artifactId>jooq-codegen-maven</artifactId>
-
-        <executions>
-          <execution>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>generate</goal>
-            </goals>
-
-            <configuration>
-              <!-- jdbc config -->
-              <jdbc>
-                <url>jdbc:postgresql://localhost:5700/postgres?currentSchema=spring_demo</url>
-                <user>postgres</user>
-                <password>postgres</password>
-              </jdbc>
-
-              <generator>
-                <!-- database options -->
-                <database>
-                  <name>org.jooq.meta.postgres.PostgresDatabase</name>
-                  <includes>.*</includes>
-                  <excludes>flyway_schema_history</excludes>
-                  <inputSchema>spring_demo</inputSchema>
-                </database>
-
-                <!-- generate options -->
-                <generate>
-                  <deprecated>true</deprecated>
-                  <instanceFields>true</instanceFields>
-                  <pojos>false</pojos>
-                </generate>
-
-                <!-- target -->
-                <target>
-                  <packageName>com.zlargon.springdemo.jooq</packageName>
-                  <directory>src/main/java</directory>
-                </target>
-              </generator>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
       <!-- jacoco-maven-plugin -->
       <!-- https://www.baeldung.com/jacoco -->
       <!-- https://github.com/dailycodebuffer/Spring-MVC-Tutorials/blob/master/JaCoCo-Demo/pom.xml -->
@@ -301,18 +254,6 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-
-      <!-- maven-clean-plugin -->
-      <plugin>
-        <artifactId>maven-clean-plugin</artifactId>
-        <configuration>
-          <filesets>
-            <fileset>
-              <directory>src/main/java/com/zlargon/springdemo/jooq</directory>
-            </fileset>
-          </filesets>
-        </configuration>
       </plugin>
     </plugins>
   </build>
