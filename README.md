@@ -26,10 +26,11 @@ yarn log     # show logs from docker compose
 ## Commands
 
 ```bash
-yarn start   # run spring boot application
-yarn test    # run test by console launcher
-yarn clean   # clean the project
-yarn format  # format the source code
+yarn start     # run spring boot application
+yarn test      # run test by console launcher
+yarn coverage  # run test with code coverage
+yarn clean     # clean the project
+yarn format    # format the source code
 ```
 
 # Test

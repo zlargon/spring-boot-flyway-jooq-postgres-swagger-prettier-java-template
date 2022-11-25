@@ -2,6 +2,7 @@
   "scripts": {
     "start": "mvn spring-boot:run",
     "test": "scripts/test.sh",
+    "coverage": "mvn verify && open target/site/jacoco/index.html",
     "clean": "mvn clean",
     "format": "mvn prettier:write",
     "jooq:codegen": "scripts/jooq_codegen.sh",
@@ -9,6 +10,6 @@
     "up": "docker compose --project-name springboot-demo up -d",
     "stop": "docker compose --project-name springboot-demo stop",
     "down": "docker compose --project-name springboot-demo down",
-    "log": "docker compose --project-name  springboot-demo logs --follow"
+    "log": "docker compose --project-name springboot-demo logs --follow"
   }
 }
