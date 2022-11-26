@@ -1,8 +1,10 @@
 package com.zlargon.springdemo.models;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class Book {
 
   private Integer id;
