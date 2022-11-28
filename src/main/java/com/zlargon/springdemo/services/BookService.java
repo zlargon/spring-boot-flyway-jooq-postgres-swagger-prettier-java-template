@@ -3,14 +3,16 @@ package com.zlargon.springdemo.services;
 import com.zlargon.springdemo.dao.BookDao;
 import com.zlargon.springdemo.models.Book;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class BookService {
 
-  @Autowired
-  BookDao bookDao;
+  private final BookDao bookDao;
+
+  public BookService(BookDao bookDao) {
+    this.bookDao = bookDao;
+  }
 
   /**
    * 1. get books

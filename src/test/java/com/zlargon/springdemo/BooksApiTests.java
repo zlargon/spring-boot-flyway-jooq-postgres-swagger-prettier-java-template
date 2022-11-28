@@ -26,8 +26,12 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 @TestMethodOrder(OrderAnnotation.class) // Enable @Order Annotation
 public class BooksApiTests {
 
+  private final MockMvc mockMvc;
+
   @Autowired
-  private MockMvc mockMvc;
+  public BooksApiTests(MockMvc mockMvc) {
+    this.mockMvc = mockMvc;
+  }
 
   @Test
   @Order(1)
