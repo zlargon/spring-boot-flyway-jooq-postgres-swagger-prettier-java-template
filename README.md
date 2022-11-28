@@ -1,20 +1,45 @@
-# Spring Boot Demo
+# spring-boot-flyway-jooq-postgres-swagger-prettier-java-template
 
 Create spring boot project from scratch:
 
 https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.6&packaging=jar&jvmVersion=11&groupId=com.zlargon&artifactId=springdemo&name=springdemo&description=&packageName=com.zlargon.springdemo&dependencies=lombok,devtools,jooq,postgresql,web,actuator,testcontainers,flyway
 
+## Features
+
+| Name            | Description                      |
+| --------------- | -------------------------------- |
+| Spring Web MVC  |                                  |
+| Spring Devtools | Hot Reload Spring boot           |
+| Lombok          | Prevent boilerplate code         |
+| Docker          | Run SQL Database with container  |
+| Postgres        | SQL Database                     |
+| Flyway          | SQL Database Migration           |
+| jOOQ            | Typesafe SQL ORM                 |
+| Swagger UI      | OpenAPI documentation            |
+| Junit 5         | Unit Test                        |
+| Jacoco          | Code Coverage                    |
+| Test Container  | Run docker container for testing |
+| Prettier        | Code Formatter                   |
+| Git Hooks       | Pre-commit, pre-push             |
+
 ## Prerequisite
 
-- bash
-- Docker Desktop: `brew install --cask docker`
-- Maven: `sdk install maven 3.8.4`
-- Java 11: `sdk install java 11.0.13-zulu`
-- yarn: `brew install yarn`
-- curl (Optional): `brew install curl`
-- jq (Optional): `brew install jq`
+```bash
+bash
 
-## Docker
+# Install by sdkman: https://sdkman.io/
+sdk install java 11.0.17-zulu  # Java 11
+sdk install maven 3.8.6        # Maven
+sdk install jbang 0.101.0      # Jbang for running jOOQ code generator script
+
+# Install by brew: https://brew.sh/
+brew install --cask docker  # Docker Desktop
+brew install yarn           # (Optional) For running scripts in package.json (yarn 1.22.x)
+brew install curl           # (Optional) For running the testing curl script
+brew install jq             # (Optional) For running the testing curl script
+```
+
+## Setup Postgres by docker compose
 
 ```bash
 yarn up      # run docker compose up
@@ -23,25 +48,25 @@ yarn down    # run docker compose down
 yarn log     # show logs from docker compose
 ```
 
-## Commands
+## Scripts
 
 ```bash
 yarn start         # run spring boot application
-yarn test          # run test by console launcher
-yarn coverage      # run test with code coverage
+yarn test          # run tests by console launcher
+yarn coverage      # run tests with code coverage and open the report website
 yarn clean         # clean the project
 yarn format        # format the source code
 yarn jooq:codegen  # run script to update jooq generated code
-yarn doc           # open swagger-ui for API documentation
+yarn doc           # open swagger-ui website for API documentation
 ```
 
-# Test
+## Run Spring Application
 
 1. Run postgres at port 5700 by docker
 
    ```bash
    yarn up
-   yarn log  # check the logs from docker
+   yarn log  # check the logs from docker compose
    ```
 
 2. Run Spring boot service
@@ -88,7 +113,7 @@ yarn doc           # open swagger-ui for API documentation
   - spring-boot-devtools
   - spring-boot-starter-actuator
 
-## Plugins
+## Maven Plugins
 
 - spring-boot-maven-plugin
 
@@ -106,3 +131,19 @@ yarn doc           # open swagger-ui for API documentation
     - printWidth: 120
     - tabWidth: 2
     - useTabs: false
+
+## VSCode Plugins
+
+- [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+- [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack)
+- [Java prettier formatter](https://marketplace.visualstudio.com/items?itemName=mwpb.java-prettier-formatter)
+
+  ```json
+  "[java]": {
+    "editor.defaultFormatter": "mwpb.java-prettier-formatter",
+    "editor.formatOnSave": true
+  },
+  ```
+
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+- [ShellCheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck)
