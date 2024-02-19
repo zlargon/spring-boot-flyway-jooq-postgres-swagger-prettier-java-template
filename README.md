@@ -136,14 +136,7 @@ yarn doc           # open swagger-ui website for API documentation
 
 - [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 - [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack)
-- [Java prettier formatter](https://marketplace.visualstudio.com/items?itemName=mwpb.java-prettier-formatter)
-
-  ```json
-  "[java]": {
-    "editor.defaultFormatter": "mwpb.java-prettier-formatter",
-    "editor.formatOnSave": true
-  },
-  ```
-
+- [SonarLint](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - [ShellCheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck)

@@ -1,0 +1,44 @@
+{
+  // ==================================
+  // java
+  // ==================================
+  "java.compile.nullAnalysis.mode": "disabled",
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "java.inlayHints.parameterNames.enabled": "none",
+
+  // ==================================
+  // coding style
+  // ==================================
+  "editor.formatOnSave": true,
+  "editor.suggestSelection": "first",
+  "editor.renderWhitespace": "boundary",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  // prettier
+  // https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.configPath": ".prettierrc",
+
+  // code spell checker
+  // https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+  "cSpell.enabled": true,
+  "cSpell.words": [
+    "assertj",
+    "codegen",
+    "flywaydb",
+    "jacoco",
+    "jbang",
+    "jdbc",
+    "jooq",
+    "openapi",
+    "sdkman",
+    "springboot",
+    "springdemo",
+    "springdoc",
+    "zlargon"
+  ]
+}
