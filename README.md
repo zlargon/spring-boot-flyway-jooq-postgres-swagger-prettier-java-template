@@ -96,7 +96,7 @@ yarn doc           # open swagger-ui website for API documentation
 - document
 
   - springdoc-openapi-ui
-    - the api document will be generated at `http://localhost:8080/swagger-ui`
+    - the api document will be generated at `http://localhost:8080/swagger-ui/index.html`
 
 - test
 

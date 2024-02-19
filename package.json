@@ -7,7 +7,7 @@
     "start": "mvn spring-boot:run",
     "test": "mvn test",
     "coverage": "mvn verify && open target/site/jacoco/index.html",
-    "doc": "open http://localhost:8080/swagger-ui.html",
+    "doc": "open http://localhost:8080/swagger-ui/index.html",
     "clean": "mvn clean",
     "format": "mvn prettier:write",
     "jooq:codegen": "scripts/jooq_codegen.sh",
