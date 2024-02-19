@@ -40,7 +40,7 @@ if [[ $ans != "Y" && $ans != "y" ]]; then
 fi
 
 _echo "Generate the jooq package"
-jbang -Djooq.version=3.15.12 --deps org.postgresql:postgresql:42.4.1 codegen@jooq src/main/resources/jooq-config.xml
+jbang -Djooq.version=3.18.9 --deps org.postgresql:postgresql:42.6.0 codegen@jooq src/main/resources/jooq-config.xml
 
 _echo "Format the code by prettier"
 mvn prettier:write

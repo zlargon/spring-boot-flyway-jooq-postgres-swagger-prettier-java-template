@@ -2,7 +2,7 @@
 
 Create spring boot project from scratch:
 
-https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.6&packaging=jar&jvmVersion=11&groupId=com.zlargon&artifactId=springdemo&name=springdemo&description=&packageName=com.zlargon.springdemo&dependencies=lombok,devtools,jooq,postgresql,web,actuator,flyway
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.2.2&packaging=jar&jvmVersion=17&groupId=com.zlargon&artifactId=springdemo&name=springdemo&description=&packageName=com.zlargon.springdemo&dependencies=lombok,devtools,jooq,postgresql,web,actuator,flyway
 
 ## Features
 
@@ -14,7 +14,7 @@ https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.6
 | Docker          | Run SQL Database with container |
 | Postgres        | SQL Database                    |
 | Flyway          | SQL Database Migration          |
-| jOOQ            | Typesafe SQL ORM                |
+| jOOQ            | Type-safe SQL ORM               |
 | Swagger UI      | OpenAPI documentation           |
 | Junit 5         | Unit Test                       |
 | Jacoco          | Code Coverage                   |
@@ -27,9 +27,9 @@ https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.6
 bash
 
 # Install by sdkman: https://sdkman.io/
-sdk install java 11.0.17-zulu  # Java 11
-sdk install maven 3.8.6        # Maven
-sdk install jbang 0.101.0      # Jbang for running jOOQ code generator script
+sdk install java  17.0.9-graalce  # Java 17
+sdk install maven 3.9.6           # Maven
+sdk install jbang 0.114.0         # Jbang for running jOOQ code generator script
 
 # Install by brew: https://brew.sh/
 brew install --cask docker  # Docker Desktop
@@ -90,7 +90,7 @@ yarn doc           # open swagger-ui website for API documentation
 
 - database
 
-  - spring-boot-starter-jooq
+  - spring-boot-starter-jooq (jooq 3.18.9)
   - org.flywaydb:flyway-core
   - postgresql
 
@@ -106,6 +106,7 @@ yarn doc           # open swagger-ui website for API documentation
 - tools
 
   - lombok
+  - commons-io
   - spring-boot-devtools
   - spring-boot-starter-actuator
 
@@ -113,15 +114,15 @@ yarn doc           # open swagger-ui website for API documentation
 
 - spring-boot-maven-plugin
 
-- exec-maven-plugin
+- exec-maven-plugin (3.1.0)
 
   - Install git hook
 
-- jacoco-maven-plugin
+- jacoco-maven-plugin (0.8.11)
 
   - The code coverage report will be generated at `target/site/jacoco/index.html`
 
-- prettier-maven-plugin
+- prettier-maven-plugin (0.22)
 
   - format the source code
     - printWidth: 120

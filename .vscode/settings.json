@@ -30,6 +30,7 @@
     "assertj",
     "codegen",
     "flywaydb",
+    "graalce",
     "jacoco",
     "jbang",
     "jdbc",
