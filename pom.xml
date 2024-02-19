@@ -150,7 +150,7 @@
               <goal>exec</goal>
             </goals>
             <configuration>
-              <executable>${basedir}/ghooks/install</executable>
+              <executable>${basedir}/.husky/install</executable>
             </configuration>
           </execution>
         </executions>

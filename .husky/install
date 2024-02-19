@@ -2,5 +2,5 @@
 set -e
 
 # setup git hooks path
-git config core.hooksPath ghooks
+git config core.hooksPath .husky || true
 echo "[GIT] git hooks has been installed."
