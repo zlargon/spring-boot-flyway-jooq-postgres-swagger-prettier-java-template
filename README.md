@@ -41,10 +41,11 @@ brew install jq             # (Optional) For running the testing curl script
 ## Setup Postgres by docker compose
 
 ```bash
-yarn up      # run docker compose up
-yarn stop    # run docker compose stop
-yarn down    # run docker compose down
-yarn log     # show logs from docker compose
+yarn up            # run docker compose up
+yarn stop          # run docker compose stop
+yarn down          # run docker compose down
+yarn log           # show logs from docker compose
+yarn docker:clean  # clean up docker volumes
 ```
 
 ## Scripts

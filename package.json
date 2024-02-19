@@ -15,7 +15,8 @@
     "up": "docker compose --project-name springboot-demo up -d",
     "stop": "docker compose --project-name springboot-demo stop",
     "down": "docker compose --project-name springboot-demo down",
-    "log": "docker compose --project-name springboot-demo logs --follow"
+    "log": "docker compose --project-name springboot-demo logs --follow",
+    "docker:clean": "docker system prune --volumes"
   },
   "devDependencies": {
     "prettier": "3.2.5",
