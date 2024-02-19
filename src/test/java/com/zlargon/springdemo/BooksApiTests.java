@@ -70,7 +70,10 @@ class BooksApiTests {
         MockMvcRequestBuilders
           .request(HttpMethod.POST, "/api/v1/books")
           .contentType(MediaType.APPLICATION_JSON)
-          .content(json("{`title`:`my book`}"))
+          .content(
+            """
+            {"title":"my book"}"""
+          )
       )
       .andExpect(MockMvcResultMatchers.status().isOk()) // 200
       .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
@@ -91,10 +94,10 @@ class BooksApiTests {
       .getResponse()
       .getContentAsString();
 
-    assertThat(jsonResponse).isEqualTo(json("[{`id`:1,`title`:`my book`}]"));
-  }
-
-  private String json(String str) {
-    return str.replace('`', '"');
+    assertThat(jsonResponse)
+      .isEqualTo(
+        """
+        [{"id":1,"title":"my book"}]"""
+      );
   }
 }
