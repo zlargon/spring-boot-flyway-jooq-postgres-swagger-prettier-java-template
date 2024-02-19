@@ -2,25 +2,24 @@
 
 Create spring boot project from scratch:
 
-https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.6&packaging=jar&jvmVersion=11&groupId=com.zlargon&artifactId=springdemo&name=springdemo&description=&packageName=com.zlargon.springdemo&dependencies=lombok,devtools,jooq,postgresql,web,actuator,testcontainers,flyway
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.6&packaging=jar&jvmVersion=11&groupId=com.zlargon&artifactId=springdemo&name=springdemo&description=&packageName=com.zlargon.springdemo&dependencies=lombok,devtools,jooq,postgresql,web,actuator,flyway
 
 ## Features
 
-| Name            | Description                      |
-| --------------- | -------------------------------- |
-| Spring Web MVC  |                                  |
-| Spring Devtools | Hot Reload Spring boot           |
-| Lombok          | Prevent boilerplate code         |
-| Docker          | Run SQL Database with container  |
-| Postgres        | SQL Database                     |
-| Flyway          | SQL Database Migration           |
-| jOOQ            | Typesafe SQL ORM                 |
-| Swagger UI      | OpenAPI documentation            |
-| Junit 5         | Unit Test                        |
-| Jacoco          | Code Coverage                    |
-| Test Container  | Run docker container for testing |
-| Prettier        | Code Formatter                   |
-| Git Hooks       | Pre-commit, pre-push             |
+| Name            | Description                     |
+| --------------- | ------------------------------- |
+| Spring Web MVC  |                                 |
+| Spring Devtools | Hot Reload Spring boot          |
+| Lombok          | Prevent boilerplate code        |
+| Docker          | Run SQL Database with container |
+| Postgres        | SQL Database                    |
+| Flyway          | SQL Database Migration          |
+| jOOQ            | Typesafe SQL ORM                |
+| Swagger UI      | OpenAPI documentation           |
+| Junit 5         | Unit Test                       |
+| Jacoco          | Code Coverage                   |
+| Prettier        | Code Formatter                  |
+| Git Hooks       | Pre-commit, pre-push            |
 
 ## Prerequisite
 
@@ -102,9 +101,6 @@ yarn doc           # open swagger-ui website for API documentation
 - test
 
   - spring-boot-starter-test
-  - org.testcontainers:testcontainers-bom
-  - org.testcontainers:junit-jupiter
-  - org.testcontainers:postgresql
 
 - tools
 
