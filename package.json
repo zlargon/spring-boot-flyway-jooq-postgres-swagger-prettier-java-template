@@ -22,5 +22,8 @@
     "lint-staged": "15.2.2",
     "prettier": "3.2.5",
     "prettier-plugin-java": "2.5.0"
+  },
+  "lint-staged": {
+    "src/**/*": "prettier --check"
   }
 }
