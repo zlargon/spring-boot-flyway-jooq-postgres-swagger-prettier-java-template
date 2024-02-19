@@ -1,4 +1,8 @@
 {
+  "volta": {
+    "node": "18.19.0",
+    "yarn": "1.22.21"
+  },
   "scripts": {
     "start": "mvn spring-boot:run",
     "test": "scripts/test.sh",
