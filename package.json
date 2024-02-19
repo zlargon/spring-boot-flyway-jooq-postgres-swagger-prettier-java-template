@@ -5,7 +5,7 @@
   },
   "scripts": {
     "start": "mvn spring-boot:run",
-    "test": "scripts/test.sh",
+    "test": "mvn test",
     "coverage": "mvn verify && open target/site/jacoco/index.html",
     "doc": "open http://localhost:8080/swagger-ui.html",
     "clean": "mvn clean",

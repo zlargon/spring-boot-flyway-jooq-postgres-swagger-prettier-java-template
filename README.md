@@ -52,7 +52,7 @@ yarn log     # show logs from docker compose
 
 ```bash
 yarn start         # run spring boot application
-yarn test          # run tests by console launcher
+yarn test          # run tests
 yarn coverage      # run tests with code coverage and open the report website
 yarn clean         # clean the project
 yarn format        # format the source code
@@ -102,7 +102,6 @@ yarn doc           # open swagger-ui website for API documentation
 - test
 
   - spring-boot-starter-test
-  - junit-platform-console-standalone
   - org.testcontainers:testcontainers-bom
   - org.testcontainers:junit-jupiter
   - org.testcontainers:postgresql

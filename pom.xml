@@ -87,14 +87,6 @@
       <version>1.6.13</version>
     </dependency>
 
-    <!-- console-launcher: https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console-standalone -->
-    <dependency>
-      <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-console-standalone</artifactId>
-      <version>1.9.1</version>
-      <scope>test</scope>
-    </dependency>
-
     <!-- test containers -->
     <dependency>
       <groupId>org.testcontainers</groupId>
