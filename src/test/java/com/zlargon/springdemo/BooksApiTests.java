@@ -29,7 +29,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 @EnableAutoConfiguration
 @TestInstance(Lifecycle.PER_CLASS) // Enable @BeforeAll with non-static method
 @TestMethodOrder(OrderAnnotation.class) // Enable @Order Annotation
-public class BooksApiTests {
+class BooksApiTests {
 
   private final MockMvc mockMvc;
   private final JdbcTemplate jdbc;
@@ -49,7 +49,7 @@ public class BooksApiTests {
   @Test
   @Order(1)
   @DisplayName("Expect to get empty book list first time")
-  public void getBook() throws Exception {
+  void getBook() throws Exception {
     mockMvc
       .perform(
         MockMvcRequestBuilders
@@ -64,7 +64,7 @@ public class BooksApiTests {
   @Test
   @Order(2)
   @DisplayName("Expect to create a book, and get book list with new book")
-  public void createBook() throws Exception {
+  void createBook() throws Exception {
     mockMvc
       .perform(
         MockMvcRequestBuilders

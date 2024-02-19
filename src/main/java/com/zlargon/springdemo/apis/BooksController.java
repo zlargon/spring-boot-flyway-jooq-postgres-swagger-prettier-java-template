@@ -23,7 +23,6 @@ public class BooksController {
 
   // POST /api/v1/books
   @PostMapping
-  @ResponseBody
   public Book addBook(@RequestBody Book book) {
     return bookService.addBook(book);
   }
