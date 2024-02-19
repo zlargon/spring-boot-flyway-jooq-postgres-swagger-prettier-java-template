@@ -6,13 +6,17 @@ package com.zlargon.springdemo.jooq.tables;
 import com.zlargon.springdemo.jooq.Keys;
 import com.zlargon.springdemo.jooq.SpringDemo;
 import com.zlargon.springdemo.jooq.tables.records.BookRecord;
+import java.util.function.Function;
 import org.jooq.Field;
 import org.jooq.ForeignKey;
+import org.jooq.Function2;
 import org.jooq.Identity;
 import org.jooq.Name;
 import org.jooq.Record;
+import org.jooq.Records;
 import org.jooq.Row2;
 import org.jooq.Schema;
+import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -120,6 +124,11 @@ public class Book extends TableImpl<BookRecord> {
     return new Book(alias, this);
   }
 
+  @Override
+  public Book as(Table<?> alias) {
+    return new Book(alias.getQualifiedName(), this);
+  }
+
   /**
    * Rename this table
    */
@@ -136,6 +145,14 @@ public class Book extends TableImpl<BookRecord> {
     return new Book(name, null);
   }
 
+  /**
+   * Rename this table
+   */
+  @Override
+  public Book rename(Table<?> name) {
+    return new Book(name.getQualifiedName(), null);
+  }
+
   // -------------------------------------------------------------------------
   // Row2 type methods
   // -------------------------------------------------------------------------
@@ -143,5 +160,20 @@ public class Book extends TableImpl<BookRecord> {
   @Override
   public Row2<Integer, String> fieldsRow() {
     return (Row2) super.fieldsRow();
+  }
+
+  /**
+   * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
+   */
+  public <U> SelectField<U> mapping(Function2<? super Integer, ? super String, ? extends U> from) {
+    return convertFrom(Records.mapping(from));
+  }
+
+  /**
+   * Convenience mapping calling {@link SelectField#convertFrom(Class,
+   * Function)}.
+   */
+  public <U> SelectField<U> mapping(Class<U> toType, Function2<? super Integer, ? super String, ? extends U> from) {
+    return convertFrom(toType, Records.mapping(from));
   }
 }

@@ -136,5 +136,6 @@ public class BookRecord extends UpdatableRecordImpl<BookRecord> implements Recor
     super(Book.BOOK);
     setId(id);
     setTitle(title);
+    resetChangedOnNotNull();
   }
 }
