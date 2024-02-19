@@ -16,5 +16,9 @@
     "stop": "docker compose --project-name springboot-demo stop",
     "down": "docker compose --project-name springboot-demo down",
     "log": "docker compose --project-name springboot-demo logs --follow"
+  },
+  "devDependencies": {
+    "prettier": "3.2.5",
+    "prettier-plugin-java": "2.5.0"
   }
 }
